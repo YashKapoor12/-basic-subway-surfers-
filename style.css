@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#game{
+    width:300px;
+    height: 500px;
+    margin: auto;
+    background-color: aqua;
+    border: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    
+}
+#character{
+    width:100px;
+    height: 100px;
+    background-color: red;
+    position:relative;
+    top: 400px;
+    left: 100px;
+}
+#block{
+    width: 100px;
+    height: 100px;
+    background-color:black;
+    position:absolute;
+    animation:slide 0.75s infinite linear;
+}
+#white{
+    width:500px;
+    height:120px;
+    background-color:white;
+    z-index: 10000;
+    position:relative;
+    top:500px
+}
+@keyframes slide{
+    0%{top:-100px}
+    100%{top:500px;}
+}
