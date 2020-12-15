@@ -9,7 +9,11 @@ function moveLeft(){
     }
    
 }
-
+function replay(){
+    var block=document.getElementById("block");
+    block.style.animation="slide 0.75s infinite linear"
+    score=0
+}
 function moveRight(){
     let left=parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     left+=100;
@@ -20,7 +24,7 @@ function moveRight(){
 document.addEventListener("keydown",event=>{
     if (event.key==="ArrowRight"){moveRight()};
     if (event.key==="ArrowLeft"){moveLeft()};
-    if(event.key=="a"){block.style.animation="slide 0.75s infinite linear";score=0}}
+    if(event.key=="a"){replay()}}
 )
 var block=document.getElementById("block");
 block.addEventListener('animationiteration',()=>{
