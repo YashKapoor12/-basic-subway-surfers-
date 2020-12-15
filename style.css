@@ -10,14 +10,12 @@
     border: 2px solid black;
     box-sizing: border-box;
     overflow: hidden;
-    position: absolute;
-    
 }
 #character{
     width:100px;
     height: 100px;
     background-color: red;
-    position:relative;
+    position: relative;;
     top: 400px;
     left: 100px;
 }
@@ -25,16 +23,41 @@
     width: 100px;
     height: 100px;
     background-color:black;
-    position:absolute;
+    position: relative;
     animation:slide 0.75s infinite linear;
 }
 #white{
     width:500px;
     height:120px;
     background-color:white;
-    z-index: 10000;
-    position:relative;
-    top:500px
+    position:absolute;
+    top:500px;
+}
+#left::before{
+    content: "<=";
+    position: absolute;
+    top:80%;
+    left:20%;
+    background-color: orangered;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    size: 50px;
+}
+#right::before{
+    content: "=>";
+    position: absolute;
+    top:80%;
+    right:20%;
+    background-color: orangered;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    size: 50px;
 }
 @keyframes slide{
     0%{top:-100px}

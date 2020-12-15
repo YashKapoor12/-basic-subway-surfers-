@@ -9,6 +9,7 @@ function moveLeft(){
     }
    
 }
+
 function moveRight(){
     let left=parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     left+=100;
@@ -24,8 +25,8 @@ document.addEventListener("keydown",event=>{
 var block=document.getElementById("block");
 block.addEventListener('animationiteration',()=>{
     var rand=Math.floor(Math.random()*3)
-    var left=rand*100;
-    block.style.left=left+"px";
+    left=rand*100;
+    block.style.left=left+"px"
     score++;
 })
 setInterval(function(){
@@ -39,7 +40,7 @@ setInterval(function(){
                 highestScore=highScore[i];
             }
         }
-        alert("Game Over.Your current score is : "+score+" Your all time best is :"+highestScore);
+        alert("Game Over.Your current score is : "+score+". Your all time best is :"+highestScore+". Press a to replay.");
         block.style.animation="none"
     }
 })
